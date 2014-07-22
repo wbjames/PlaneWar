@@ -84,7 +84,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         
         // init background sprite
         
-        for index in 0..2 {
+        for index in 0..<2 {
             let backgroundSprite = SKSpriteNode(texture:backgroundTexture)
             
             backgroundSprite.position = CGPointMake(size.width/2,size.height / 2 + CGFloat(index) * backgroundSprite.size.height)
@@ -251,11 +251,11 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         var speed:Float
         var enemyPlane:EnemyPlane
         switch choose{
-        case 0..75:
+        case 0..<75:
             type = .Small
             speed = Float(arc4random() % 3) + 2
             enemyPlane = EnemyPlane.createSmallPlane()
-        case 75..97:
+        case 75..<97:
             type = .Medium
             speed = Float(arc4random() % 3) + 4
             enemyPlane = EnemyPlane.createMediumPlane()
